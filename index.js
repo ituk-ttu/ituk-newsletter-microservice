@@ -21,8 +21,9 @@ app.post('/signup', function (req, res) {
             pre_confirmed: false,
             pre_approved: true
         }
-    }, function (response) {
+    }, function (response, err) {
         console.log(response);
+        console.log(err);
         res.sendStatus(200);
     });
 });
