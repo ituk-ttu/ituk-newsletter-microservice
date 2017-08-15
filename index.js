@@ -4,7 +4,6 @@ var fs = require("fs");
 var http = require('http').Server(app);
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var urlencode = require('urlencode');
 var config = JSON.parse(fs.readFileSync("config.json"));
 
 app.use(bodyParser.json()); // support json encoded bodies
@@ -21,7 +20,7 @@ app.post('/signup', function (req, res) {
     request({
         method: "POST",
         url: config.newsletter.signupUrl,
-        body: {
+        formData: {
             list_id: config.newsletter.listId,
             subscriber: req.body.email,
             pre_confirmed: false,
