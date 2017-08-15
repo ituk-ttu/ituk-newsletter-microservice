@@ -20,11 +20,6 @@ app.post('/signup', function (req, res) {
             subscriber: req.body.email,
             pre_confirmed: false,
             pre_approved: true
-        },
-        auth: {
-            user: config.newsletter.auth.user,
-            pass: config.newsletter.auth.pass,
-            sendImmediately: false
         }
     }, function (response, err) {
         console.log(response);

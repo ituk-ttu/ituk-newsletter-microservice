@@ -2,10 +2,6 @@
   "port": 1337,
   "newsletter": {
     "listId": "list.example.com",
-    "signupUrl": "http://exampleserver/members",
-    "auth": {
-      "username": "example",
-      "password": "secret"
-    }
+    "signupUrl": "http://user:pw@exampleserver/members",
   }
 }
