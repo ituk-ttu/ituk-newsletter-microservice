@@ -22,6 +22,7 @@ app.post('/signup', function (req, res) {
             pre_approved: true
         }
     }, function (response) {
+        console.log(response);
         res.sendStatus(200);
     });
 });
