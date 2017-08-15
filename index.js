@@ -23,7 +23,8 @@ app.post('/signup', function (req, res) {
         },
         auth: {
             user: config.newsletter.auth.user,
-            pass: config.newsletter.auth.pass
+            pass: config.newsletter.auth.pass,
+            sendImmediately: false
         }
     }, function (response, err) {
         console.log(response);
