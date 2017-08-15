@@ -11,6 +11,12 @@ app.use(bodyParser.urlencoded({	extended: true })); // support encoded bodies
 app.use(cors());
 
 app.post('/signup', function (req, res) {
+    console.log({
+        list_id: config.newsletter.listId,
+        subscriber: req.body.email,
+        pre_confirmed: false,
+        pre_approved: true
+    });
     request({
         method: "POST",
         url: config.newsletter.signupUrl,
