@@ -13,7 +13,7 @@ app.use(cors());
 app.post('/signup', function (req, res) {
     console.log({
         list_id: config.newsletter.listId,
-        subscriber: req.body.email,
+        subscriber: req.body.body.email,
         pre_confirmed: false,
         pre_approved: true
     });
@@ -22,7 +22,7 @@ app.post('/signup', function (req, res) {
         url: config.newsletter.signupUrl,
         formData: {
             list_id: config.newsletter.listId,
-            subscriber: req.body.email,
+            subscriber: req.body.body.email,
             pre_confirmed: false,
             pre_approved: true
         }
