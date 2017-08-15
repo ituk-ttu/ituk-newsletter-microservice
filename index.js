@@ -20,8 +20,7 @@ app.post('/signup', function (req, res) {
     request({
         method: "POST",
         url: config.newsletter.signupUrl,
-        json: true,
-        body: {
+        form: {
             list_id: config.newsletter.listId,
             subscriber: req.body.body.email,
             pre_confirmed: false,
